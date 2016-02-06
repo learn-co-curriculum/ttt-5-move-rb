@@ -31,8 +31,8 @@ describe './bin/move executing a CLI Application' do
   it 'calls move passing the user input' do
     allow($stdout).to receive(:puts)
 
-    allow(self).to receive(:gets).and_return('1')
-    expect(self).to receive(:move).with(anything, '1', any_args), "Make sure `bin/move` is passing the user input to the `#move` method."
+    allow(self).to receive(:gets).and_return("1")
+    expect(self).to receive(:move).with(anything, "1", any_args), "Make sure `bin/move` is passing the user input to the `#move` method."
 
     run_file("./bin/move")
   end
@@ -40,7 +40,7 @@ describe './bin/move executing a CLI Application' do
   it 'move modifies the board correctly' do
     allow($stdout).to receive(:puts)
 
-    allow(self).to receive(:gets).and_return('1')
+    allow(self).to receive(:gets).and_return("1")
     board = get_variable_from_file("./bin/move", "board")
 
     expect(board).to eq(["X", " ", " ", " ", " ", " ", " ", " ", " "])
@@ -49,7 +49,7 @@ describe './bin/move executing a CLI Application' do
   it 'calls display_board passing the modified board' do
     allow($stdout).to receive(:puts)
 
-    allow(self).to receive(:gets).and_return('1')
+    allow(self).to receive(:gets).and_return("1")
     allow(self).to receive(:display_board)
     expect(self).to receive(:display_board).with(["X", " ", " ", " ", " ", " ", " ", " ", " "]).at_least(:once)
 
@@ -57,7 +57,7 @@ describe './bin/move executing a CLI Application' do
   end
 
   it 'prints the board with a move to the top left' do
-    expect(self).to receive(:gets).and_return('1')
+    expect(self).to receive(:gets).and_return("1")
 
     output = capture_puts{ run_file("./bin/move") }
 
