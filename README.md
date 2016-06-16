@@ -89,11 +89,11 @@ Regarding the player's input: if the user's input is `"5"`, the player wants to 
 
 The player's input is the string `'5'`, the first thing you'll need to do is convert the string to it's integer value as array indexes are always integers (think `'5'` vs `5`). Give `#to_i` a try, as in `'5'.to_i`.
 
-Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#move` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
+Also remember, from the player's point of view, the board contains spaces 1-9. An array's indexes start their count at 0. You'll have to account for that in your `#input_to_index` method by doing some math. In this one case, make sure to put spaces between the elements you type; something like `5 + 1` - not `5+1` or `5 +1`. There is an edge case which might come up and break your code if you forget the spaces.
 
 So if the player types in a "2", what index in the board array do you want to access?
 
-![harrison ford 1](http://giphy.com/gifs/96OcHR3Ojz9QI "Harrison Ford: 1")
+![harrison ford 1](https://media.giphy.com/media/96OcHR3Ojz9QI/giphy.gif "Harrison Ford: 1")
 
 That's right, we would want to access index 1 of the board array.
 
@@ -137,3 +137,5 @@ Now, run your program by typing `ruby bin/move` in the terminal. Have fun playin
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb' title='Tic Tac Toe CLI: Adding Player Move to the Game Board'>Tic Tac Toe CLI: Adding Player Move to the Game Board</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-5-move-rb'>Tic Tac Toe Move</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-5-move-rb'>Tic Tac Toe Move</a> on Learn.co and start learning to code for free.</p>
